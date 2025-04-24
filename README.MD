@@ -155,10 +155,11 @@ Fix frontend & backend issues.
 Deploy Frontend on Netlify.
 Deploy Backend on Render.
 
-
 # Conclusion:
 GLOBYTE is built to make freelancing easier, faster, and fairer for both freelancers and clients. With AI-powered features, instant job matching, and secure UPI payments, it removes the common struggles of freelancing.
 Features like Work Roulette and the AI Work Buddy help freelancers find jobs quickly and negotiate better rates, making GLOBYTE a smarter choice for modern freelancing.
+
+
 
 
 
