@@ -6,11 +6,11 @@ connectDB();
 const PORT=5000;
 
 const freelancerRoutes = require('./routes/freelancerRoutes');
-const clientRoutes = require('./routes/clientRoutes');
+const clientsRoutes = require('./routes/clientsRoutes');
 
 app.use(express.json());
 app.use('/api', freelancerRoutes);
-app.use('/api', clientRoutes);
+app.use('/api', clientsRoutes);
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Globyte backend API');
