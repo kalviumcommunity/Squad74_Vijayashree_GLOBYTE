@@ -36,4 +36,29 @@ router.post('/clients', async (req, res) => {
   }
 });
 
+router.put('/clients/:id', async (req, res) => {
+  const { id } = req.params;
+  const { company, email, project, budget } = req.body;
+
+  try {
+    const updatedClient = await Client.findByIdAndUpdate(
+      id,
+      { company, email, project, budget },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedClient) {
+      return res.status(404).json({ success: false, message: 'Client not found' });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'Client updated successfully',
+      data: updatedClient,
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 module.exports = router;

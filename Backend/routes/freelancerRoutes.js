@@ -32,4 +32,29 @@ router.post('/freelancers', async (req, res) => {
   }
 });
 
+router.put('/freelancers/:id', async (req, res) => {
+  const { id } = req.params;
+  const { name, email, skills, experience } = req.body;
+
+  try {
+    const updatedFreelancer = await Freelancer.findByIdAndUpdate(
+      id,
+      { name, email, skills, experience },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedFreelancer) {
+      return res.status(404).json({ success: false, message: 'Freelancer not found' });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'Freelancer updated successfully',
+      data: updatedFreelancer,
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 module.exports = router;
