@@ -15,6 +15,15 @@ router.get('/clients', async (req, res) => {
   }
 });
 
+router.get('/clients/:id', async (req, res) => {
+  try {
+    const client = await Client.findById(req.params.id);
+    res.status(200).json({ success: true, data: client });
+  } catch (error) {
+    res.status(404).json({ success: false, message: 'Client not found' });
+  }
+});
+
 router.post('/clients', async (req, res) => {
   const { company, email, project, budget } = req.body;
 
