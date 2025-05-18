@@ -16,6 +16,15 @@ router.get('/freelancers', async (req, res) => {
   }
 });
 
+router.get('/freelancers/:id', async (req, res) => {
+  try {
+    const freelancer = await Freelancer.findById(req.params.id);
+    res.status(200).json({ success: true, data: freelancer });
+  } catch (error) {
+    res.status(404).json({ success: false, message: 'Freelancer not found' });
+  }
+});
+
 
 router.post('/freelancers', async (req, res) => {
   try {
