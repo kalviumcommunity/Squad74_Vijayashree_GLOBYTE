@@ -159,6 +159,10 @@ Deploy Backend on Render.
 GLOBYTE is built to make freelancing easier, faster, and fairer for both freelancers and clients. With AI-powered features, instant job matching, and secure UPI payments, it removes the common struggles of freelancing.
 Features like Work Roulette and the AI Work Buddy help freelancers find jobs quickly and negotiate better rates, making GLOBYTE a smarter choice for modern freelancing.
 
+# Backend Deployment:
+
+Render Link: https://squad74-vijayashree-globyte-2.onrender.com
+
 
 
 
