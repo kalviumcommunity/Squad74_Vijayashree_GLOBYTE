@@ -7,10 +7,12 @@ const PORT=5000;
 
 const freelancerRoutes = require('./routes/freelancerRoutes');
 const clientsRoutes = require('./routes/clientsRoutes');
+const relationshipRoutes = require('./routes/relationship');
 
 app.use(express.json());
 app.use('/api', freelancerRoutes);
 app.use('/api', clientsRoutes);
+app.use('/api/relationship', relationshipRoutes);
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Globyte backend API');
