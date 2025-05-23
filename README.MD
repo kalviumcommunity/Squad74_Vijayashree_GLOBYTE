@@ -161,7 +161,11 @@ Features like Work Roulette and the AI Work Buddy help freelancers find jobs qui
 
 # Backend Deployment:
 
-Render Link: https://squad74-vijayashree-globyte-2.onrender.com
+Render Backend Link: https://squad74-vijayashree-globyte-2.onrender.com
+
+# Frontend Deployment:
+
+Render Frontend Link: https://dashboard.render.com/static/srv-d0o1h0qli9vc73fiineg/deploys/dep-d0o1h12li9vc73fiinl0
 
 
 
